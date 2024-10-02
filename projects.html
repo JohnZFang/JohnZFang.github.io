@@ -65,9 +65,21 @@
          <a href="https://JohnZFang.github.io/fig/ECE 700 log_reg.png"> <img src="https://JohnZFang.github.io/fig/ECE 700 log_reg.png" width="100%"/></a></p>
 
         <p><b>SYDE 632 | Optimization Methods</b><br>
-         This project is extracted from my research paper, the optimization solver YALMIP and MOSEK are  in this project, just for reference, 
-          in CO602, I also implemented <code>CVX</code> solver in MATLAB to solve a numerical optimization problem, [code]
+         This project is extracted from my research paper, the optimization solver YALMIP and MOSEK are  in this project, 
         <a href="https://JohnZFang.github.io/fig/syde632.png"> <img src="https://JohnZFang.github.io/fig/syde632.png" width="100%"/></a>
+          just for reference, 
+          in CO602, I also implemented <code>CVX</code> solver in MATLAB to solve a numerical optimization problem, [code]
+          <pre>
+            cvx_begin
+variable x(3);
+minimize (pow_pos(quad_over_lin(x(1),x(2))+quad_over_lin(x(2),x(1)),2) + b*x+10+abs(x(3)+5))%x(4)^2+x(5)^2+2*x(4)*x(5);1/2*quad_form(x,A) 1/2*(A*x)'*(A*x)
+subject to
+square_pos(x'*x+1)+pow_pos(x(1),4)+pow_pos(x(2),4)+pow_pos(x(3),4)<=100;
+max([(C*x(1:2))'*(C*x(1:2)) x(1) x(2)])<=40;%square_pos(norm(C*x(1:2),2))<=40;
+x(1)>=1;
+x(2)>=1;
+cvx_end
+          </pre>
         </p>
         <p>A recap of optimization courses can be found here</p>
 <!--         <p>I'm the teaching assistant for the following courses:</p> -->
