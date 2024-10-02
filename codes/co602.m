@@ -6,11 +6,11 @@ C=[1 sqrt(2);
 b=[1 1 0];
 
 cvx_begin
-variable x(3);
-minimize (pow_pos(quad_over_lin(x(1),x(2))+quad_over_lin(x(2),x(1)),2) + b*x+10+abs(x(3)+5))%x(4)^2+x(5)^2+2*x(4)*x(5);1/2*quad_form(x,A) 1/2*(A*x)'*(A*x)
+variable x(n);
+minimize (pow_pos(quad_over_lin(x(1),x(2)) + quad_over_lin(x(2),x(1)),2) + b*x + 10 + abs(x(3)+5)) %x(4)^2+x(5)^2+2*x(4)*x(5);1/2*quad_form(x,A) 1/2*(A*x)'*(A*x)
 subject to
-square_pos(x'*x+1)+pow_pos(x(1),4)+pow_pos(x(2),4)+pow_pos(x(3),4)<=100;
-max([(C*x(1:2))'*(C*x(1:2)) x(1) x(2)])<=40;%square_pos(norm(C*x(1:2),2))<=40;
+square_pos(x'*x+1) + pow_pos(x(1),4) + pow_pos(x(2),4) + pow_pos(x(3),4)<=100;
+max([(C*x(1:2))'*(C*x(1:2)) x(1) x(2)])<=40; %square_pos(norm(C*x(1:2),2))<=40;
 x(1)>=1;
 x(2)>=1;
 cvx_end
