@@ -68,8 +68,21 @@
         
         <p><b>ECE 700 | Distributed Optimization</b><br>
         
-          Novel distributed optimization concepts and algorithms
-        are introduced in this course. One is to  reveals the strengthness of augmented terms by shortening iterative time 
+          Novel distributed optimization concepts and algorithms are introduced in this course. Fixed Point Iteration (FPI) is the skeleton of the course, 
+          every algorithm developed will be combined with FPI to address optimization problems. And even better, their convergences are guaranteed after proving the FPI convergence theorem.</p>
+
+        <p>A partially distributed algorithm is implemented to a wireless sensor network for detecting the wildfires images. We adapt the logistic regression to train our classifier, 
+          and solve this problem using gradient descent with a centralized coordinator. The idea of the algorithm is:
+          <ol>
+<li>Each sensor computes $\nabla f_i (x^k)$ and sends it back to the central coordinator</li>
+<li>The central coordinator gathers $\nabla f_i (x^k)$ from all of the sensors, performs the update
+$$x^{k+1} =x^k −\alpha \nabla f(x^k),$$
+and broadcasts $x^{k+1}$ to all the sensors</li>
+</ol>
+
+I tested different $\alpha$ and added the term $\frac{\rho}{2}\omega^\intercal \omega$ to $f (x)$, after choosing smallish $\rho$-trade-off idea is recalled again, 
+        which revealed the strengths of the augmented terms by shortening convergence time dramatically.
+ 
           [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ECE700_log_reg_model.m">code</a>].</p>
           <p><a href="https://JohnZFang.github.io/fig/ECE 700 log_reg.png"> <img src="https://JohnZFang.github.io/fig/ECE 700 log_reg.png" width="100%"/></a></p>
 
