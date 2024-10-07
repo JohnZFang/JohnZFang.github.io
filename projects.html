@@ -85,8 +85,8 @@ I tested different $\alpha$ and added the term $\frac{\rho}{2}\omega^\intercal \
           [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ECE700_log_reg_model.m">code</a>].</p>
           <p><a href="https://JohnZFang.github.io/fig/ECE 700 log_reg.png"> <img src="https://JohnZFang.github.io/fig/ECE 700 log_reg.png" width="100%"/></a></p>
 <p>(<i>Comparison of two algorithms</i>) SLAM for a swarm of wheeled mobile factory robots is considered, (many details are omitted here). 
-  There are two algorithms, i) FPI with Proximal Gradient; ii) FPI with DRS, will be implemented to the following problem with consensus technique:
-$$\underset{z \in \mathbb{R}^{2 N T},\  m \in \mathbb{R}^{2 M T}}{\operatorname{minimize}} \sum_{i \in I} \frac{1}{2}\begin{bmatrix}
+  There are two algorithms, i) FPI with Proximal Gradient; ii) FPI with DRS, will be implemented to the following problem,
+$$\underset{m \in \mathbb{R}^{2 M T},\ z \in \mathbb{R}^{2 N T} }{\operatorname{minimize}} \sum_{i \in I} \frac{1}{2}\begin{bmatrix}
 m^{\intercal} & z_{i}^{\intercal}
 \end{bmatrix} A_{i}\begin{bmatrix}
 m \\
@@ -95,7 +95,11 @@ z_{i}
 m \\
 z_{i}
 \end{bmatrix}+c_{i}$$
-
+and it's equivalent by the consensus technique,
+  $$\begin{align*}
+  \operatorname{minimize}_{m \in \mathbb{R}^{2 M T N},\ z \in \mathbb{R}^{2 T N}} & \sum_{i=1}^{N} f_{i}\left(m_{i}, z_{i}\right) \\
+\text { subject to }\quad \quad & m \in C.
+  \end{align*}$$
 </p>
         <p><b>SYDE 632 | Optimization Methods</b><br>
          This project encourages us to find the relationship between our research and the optimization methods, thus the optimization part of my CDC paper is extracted, 
