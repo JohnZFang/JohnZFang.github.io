@@ -64,14 +64,14 @@ This course is from the <a href="https://uwaterloo.ca/combinatorics-and-optimiza
 Duality and Lagrangian are accentuated as well. Farkas' lemma, which appeared once in Linear Programming, are recalled to complete the proof for KKT conditions for more general optimization problems. 
   At the end of the course, I have two questions:
 </p>
-<ul>
+<ol type="I">
         <li>Now I have built a foundation for optimization, but there are (mainly) three optimization methods introduced in this course. 
           I believe there are more methods that were not covered (based on my undergraduate courses) and It would be useful to evoke them.
           </li>
 <li>As I stated above, the convergence analysis for the Projection Gradient Method (PGM) is complex, just the thought of guaranteeing it for every method is daunting. 
   Not to mention probably countless methods on the waiting list. Is it possible to reconcile a uniform convergence analysis?
   </li>
-</ul>
+</ol>
 <p>First one is caught in SYDE 632 quickly.</p>
 
    <h2>SYDE 632: Optimization Methods</h2>
@@ -106,7 +106,7 @@ It's time to reconstruct the skeleton of the convex optimization as a preparatio
   this course we have a more concrete understanding. At the same time, some novel definitions and theorems are introduced (for me at least), like subgradients, resolvents and proximals, to do so, 
   the scope of the former courses is extended to a more comprehensive version. For example, Gradient descent method is also recalled but based on subgradients now.
 </p>
-<p>Question ii is not forgotten, all algorithms in this course are guaranteed by the convergence theorem of Fixed Point Iteration (FPI), that is, $$x^{k+1}=T(x^k),$$
+<p>Question II is not forgotten, all algorithms in this course are guaranteed by the convergence theorem of Fixed Point Iteration (FPI), that is, $$x^{k+1}=T(x^k),$$
 which transfers deliberate convergence analysis in PGM in CO 602 to a verification of the operator (PGM is factly a simplification of Proximal Gradient in this course). 
   And every algorithm cascades from part of the previous one  .
 </p>
