@@ -49,90 +49,19 @@
       <section>
         <h1>Blog Posts</h1>
         <h3>Be in a different water.</h3>
-   <h2><a href="https://JohnZFang.github.io/blog/400days_canada.html">The 400th day in Canada, I decided to publish my diary</a></h2>
+   <h2><a href="https://JohnZFang.github.io/blog/400days_canada.html">The 400th Day in Canada, I Decided to Publish My Diary</a></h2>
 
         <p>Data: 2024-09-27<br>
           Here I talk about how I feel about life in Canada, the cultural shock I experienced and how I digest them as an international student.
         </p>
 
         
-        <p><b>ECE 700 | Distributed Optimization</b><br>
-        
-          Novel distributed optimization concepts and algorithms are introduced in this course. Fixed Point Iteration (FPI) is the skeleton of the course, 
-          every algorithm developed will be combined with FPI to address optimization problems. And even better, their convergences are guaranteed after proving the FPI convergence theorem.</p>
+        <h2><a href="https://JohnZFang.github.io/blog/400days_canada.html">What I learned from three optimization courses</a></h2>
 
-        <p>(<i>Power of Augmented term</i>) A partially distributed algorithm is implemented to a wireless sensor network for detecting wildfires images. We adapt the logistic regression to train our classifier, 
-          and solve this problem using gradient descent with a centralized coordinator. The idea of the algorithm is:
-          <ol>
-<li>Each sensor computes $\nabla f_i (x^k)$ and sends it back to the central coordinator</li>
-<li>The central coordinator gathers $\nabla f_i (x^k)$ from all of the sensors, performs the update
-$$x^{k+1} =x^k −\alpha \nabla f(x^k),$$
-and broadcasts $x^{k+1}$ to all the sensors</li>
-</ol>
-
-I tested different $\alpha$ and added the term $\frac{\rho}{2}\omega^\intercal \omega$ to $f (x)$, after choosing a smallish $\rho$ (trade-off idea was recalled again), 
-        which revealed the strengths of the augmented terms by dramatically shortening iterations by 71.8% 
-          [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ECE700_log_reg_model.m">code</a>].</p>
-          <p><a href="https://JohnZFang.github.io/fig/ECE 700 log_reg.png"> <img src="https://JohnZFang.github.io/fig/ECE 700 log_reg.png" width="100%"/></a></p>
-<p>(<i>Comparison of two algorithms</i>) SLAM for a swarm of wheeled mobile factory robots is considered, (many details are omitted here). 
-  There are two distributed algorithms, i) FPI with Proximal Gradient; ii) FPI with DRS, will be implemented to the following problem,
-$$\begin{align*} \underset{m \in \mathbb{R}^{2 M T},\ z \in \mathbb{R}^{2 N T} }{\operatorname{minimize}} \sum_{i \in I} \frac{1}{2}\begin{bmatrix}
-m^{\intercal} & z_{i}^{\intercal}
-\end{bmatrix} A_{i}\begin{bmatrix}
-m \\
-z_{i}
-\end{bmatrix}+b_{i}^{\intercal}\begin{bmatrix}
-m \\
-z_{i}
-\end{bmatrix}+c_{i}\end{align*},$$
-and it's equivalent with the following problem by the consensus technique,
-  $$\begin{align*}
-  \underset{m \in \mathbb{R}^{2 M T N},\ z \in \mathbb{R}^{2 T N}}{\operatorname{minimize}}\quad \ \ & \sum_{i=1}^{N} f_{i}\left(m_{i}, z_{i}\right) \\
- \text { subject to }\quad \quad &  m \in C.
-  \end{align*}$$
-After comparing these two algorithms we can find the DRS showing less sensitive than FBS by changing the step size $\alpha$, which gives a faster convergence in this example
-   [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ECE700_slam.m">code</a>].
-</p>
-         <p><a href="https://JohnZFang.github.io/fig/ece700_slam.png"> <img src="https://JohnZFang.github.io/fig/ece700_slam.png" width="100%"/></a></p>
-        <p><b>SYDE 632 | Optimization Methods</b><br>
-         This project encourages us to find the relationship between our research and the optimization methods, thus the optimization part of my CDC paper is extracted, 
-          the optimization solver MOSEK with YALMIP is deployed in this project, and I delivered a presentation about it.</p>
-
-<p>I didn’t talk too much about engineering applications in that paper rather than showing strengths of our method numerically 
-  (although the values are rigorous from a wind turbine model), whereas it’s highly recommended in the project requirement. Therefore, 
-  I dug into the power system background and expressed the influence of my research, even further, I’m totally certain it can be extended to a distributed system by following our procedure.
-</p>
-          <p><a href="https://JohnZFang.github.io/fig/syde632.png"> <img src="https://JohnZFang.github.io/fig/syde632.png" width="100%"/></a></p>
-          <p>Just for supplement, in a bonus assignment of CO 602, another solver <code>CVX</code> is also implemented to address an optimization problem successfully 
-          [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/co602.m">code</a>].
+        <p>Data: 2024-09-27<br>
+          Here I talk about how I feel about life in Canada, the cultural shock I experienced and how I digest them as an international student.
         </p>
-        <p>A recap of optimization courses can be found <a href="https://JohnZFang.github.io/blog/opt_courses.html">here</a>.</p>
-<!--         <p>I'm the teaching assistant for the following courses:</p> -->
         
-<!--         <table>
-          <tbody>
-        <tr>
-            <th>Name</th>
-        <th>Number</th>
-        <th>Term</th>
-          </tr>
-          <tr>
-            <td>Control Applications</td>
-        <td>MTE 484</td>
-        <td>Fall 2024</td>
-          </tr>
-          <tr>
-            <td>Quantitative Methods in Biomedical Engineering</td>
-        <td>ECE 608</td>
-        <td>Spring 2024</td>
-          </tr>
-            <tr>
-            <td>Nano-instrumentation Lab</td>
-        <td>NE 488B</td>
-        <td>Winter 2024</td>
-          </tr>
-        </tbody>
-        </table> -->
         <h2>Bachelor Thesis</h2>
         
         <p><b>Algebraic Connectivity Analysis of Directed Double-Ring Network</b><br>
