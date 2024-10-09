@@ -52,106 +52,37 @@
         <p>D400 24.9.27 ☀ ️ <small>(It’s my habit to write these items in my memo.)</small></p>
 
 <p>A strong idea urges me to write something on my 400th day anniversary with Canada.</p>
-
 <p>I departed from a city in southeastern China, transferred through the Philippines, and arrived in Vancouver at 8 pm on August 25, 2023 after a 15-hour flight.</p> 
-
 <p>I will talk about how I feel about life in Canada, the cultural shock I experienced and how I digest them.</p>
 
         
    <h2>Be grateful for what I owned</h2>
 
-        <p><b>ECE 686 | Filtering and Control of Stochastic Linear Systems</b><br>
-          This project requires us to reproduce/refine a paper. I wanted to find a paper that intersected with the lecture and my research, 
-          which made it not only a project but something inspired me. This <a href="https://ieeexplore.ieee.org/document/8619108">paper</a> considers a 
-          multi-objective filter design for stochastic network which exists the data packet drops, which gives a compromise between 
-          robustness and transient performance.</p>
-          <p>The game theory in this paper looks interesting since I’m also handling the trade-off between 
-          $\mathcal{H}_2$ and $\mathcal{H}_\infty$ norms in my research. The path to attain Nash equilibrium takes some effort, but it’s a 
-          good recall of the details in the proof of Kalman filter in the lectures. 
-          Finally, two cross-coupled modified AREs are given and I benchmarked the algorithm by following the same numerical example in the paper. 
-          The presentation slides and code for reproduction can be found: [<a href="https://JohnZFang.github.io/file/project_ECE_686.pdf">slides</a>] 
-          [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ece686.m">code</a>].</p>
-          <p><a href="https://JohnZFang.github.io/fig/ece686project.png"> <img src="https://JohnZFang.github.io/fig/ece686project.png" width="100%"/></a>
+        <p>How lucky the clouds disappeared with the solar eclipse path through the region of Waterloo, 
+          and the northern lights danced in the night at the peak of the solar cycle. I always fancied myself a lucky man, whenever and wherever, I am surrounded by fortune and kindness.
         </p>
 
-        
-        <p><b>ECE 700 | Distributed Optimization</b><br>
-        
-          Novel distributed optimization concepts and algorithms are introduced in this course. Fixed Point Iteration (FPI) is the skeleton of the course, 
-          every algorithm developed will be combined with FPI to address optimization problems. And even better, their convergences are guaranteed after proving the FPI convergence theorem.</p>
+<p>I don’t want to overstate the life before landing in Canada, long story short, I couldn’t shape my values without entering Wuhan University by 
+  <a href="https://en.wikipedia.org/wiki/Gaokao">gaokao</a>. I appreciate the chance to spend four years finishing my undergraduate degree there and then study in Canada.
+  </p>
 
-        <p>(<i>Power of Augmented term</i>) A partially distributed algorithm is implemented to a wireless sensor network for detecting wildfires images. We adapt the logistic regression to train our classifier, 
-          and solve this problem using gradient descent with a centralized coordinator. The idea of the algorithm is:
-          <ol>
-<li>Each sensor computes $\nabla f_i (x^k)$ and sends it back to the central coordinator</li>
-<li>The central coordinator gathers $\nabla f_i (x^k)$ from all of the sensors, performs the update
-$$x^{k+1} =x^k −\alpha \nabla f(x^k),$$
-and broadcasts $x^{k+1}$ to all the sensors</li>
-</ol>
+<p>The opportunity of studying at the University of Waterloo is a huge blessing for me. I personally believe it’s one of the BEST control communities in Canada, 
+  there are few things I want to highlight:</p>
+<ul>
+<li><b>The compact connections with industry</b>: I attended several info-sharing events, although most of them are welcomed by co-op students. 
+  I’m not a fan of following industrial trends, but it’s important to see the specific engineering problems faced by these companies.
+</li>
+<li><b>Vibrant faculty</b>: Graduate students are involved as part of the audience during the faculty hiring process. 
+  I always believe research taste will decide how long a researcher will go. Their active and fresh ideas impressed me, which will better the development of the UW 
+  control community as well. The collaboration between seniors and the new talent intrigues me to become one of them in the future.
+</li>
+<li><b>My chance to attend ACC 2024</b>: Thanks to the reputation and location of UW control community, I can be part of such an event. 
+  Talking with fellows is really enjoyable for me, it’s nice to see so many people contributing in the control field and I was glad I could help them register!
+</li>
+</ul>
+<p>People in the UW control community, DOCS group particularly, are incredibly kind and supportive, thanks a lot!!</p>
 
-I tested different $\alpha$ and added the term $\frac{\rho}{2}\omega^\intercal \omega$ to $f (x)$, after choosing a smallish $\rho$ (trade-off idea was recalled again), 
-        which revealed the strengths of the augmented terms by dramatically shortening iterations by 71.8% 
-          [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ECE700_log_reg_model.m">code</a>].</p>
-          <p><a href="https://JohnZFang.github.io/fig/ECE 700 log_reg.png"> <img src="https://JohnZFang.github.io/fig/ECE 700 log_reg.png" width="100%"/></a></p>
-<p>(<i>Comparison of two algorithms</i>) SLAM for a swarm of wheeled mobile factory robots is considered, (many details are omitted here). 
-  There are two distributed algorithms, i) FPI with Proximal Gradient; ii) FPI with DRS, will be implemented to the following problem,
-$$\begin{align*} \underset{m \in \mathbb{R}^{2 M T},\ z \in \mathbb{R}^{2 N T} }{\operatorname{minimize}} \sum_{i \in I} \frac{1}{2}\begin{bmatrix}
-m^{\intercal} & z_{i}^{\intercal}
-\end{bmatrix} A_{i}\begin{bmatrix}
-m \\
-z_{i}
-\end{bmatrix}+b_{i}^{\intercal}\begin{bmatrix}
-m \\
-z_{i}
-\end{bmatrix}+c_{i}\end{align*},$$
-and it's equivalent with the following problem by the consensus technique,
-  $$\begin{align*}
-  \underset{m \in \mathbb{R}^{2 M T N},\ z \in \mathbb{R}^{2 T N}}{\operatorname{minimize}}\quad \ \ & \sum_{i=1}^{N} f_{i}\left(m_{i}, z_{i}\right) \\
- \text { subject to }\quad \quad &  m \in C.
-  \end{align*}$$
-After comparing these two algorithms we can find the DRS showing less sensitive than FBS by changing the step size $\alpha$, which gives a faster convergence in this example
-   [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/ECE700_slam.m">code</a>].
-</p>
-         <p><a href="https://JohnZFang.github.io/fig/ece700_slam.png"> <img src="https://JohnZFang.github.io/fig/ece700_slam.png" width="100%"/></a></p>
-        <p><b>SYDE 632 | Optimization Methods</b><br>
-         This project encourages us to find the relationship between our research and the optimization methods, thus the optimization part of my CDC paper is extracted, 
-          the optimization solver MOSEK with YALMIP is deployed in this project, and I delivered a presentation about it.</p>
 
-<p>I didn’t talk too much about engineering applications in that paper rather than showing strengths of our method numerically 
-  (although the values are rigorous from a wind turbine model), whereas it’s highly recommended in the project requirement. Therefore, 
-  I dug into the power system background and expressed the influence of my research, even further, I’m totally certain it can be extended to a distributed system by following our procedure.
-</p>
-          <p><a href="https://JohnZFang.github.io/fig/syde632.png"> <img src="https://JohnZFang.github.io/fig/syde632.png" width="100%"/></a></p>
-          <p>Just for supplement, in a bonus assignment of CO 602, another solver <code>CVX</code> is also implemented to address an optimization problem successfully 
-          [<a href="https://github.com/JohnZFang/JohnZFang.github.io/blob/main/codes/co602.m">code</a>].
-        </p>
-        <p>A recap of optimization courses can be found <a href="https://JohnZFang.github.io/blog/opt_courses.html">here</a>.</p>
-<!--         <p>I'm the teaching assistant for the following courses:</p> -->
-        
-<!--         <table>
-          <tbody>
-        <tr>
-            <th>Name</th>
-        <th>Number</th>
-        <th>Term</th>
-          </tr>
-          <tr>
-            <td>Control Applications</td>
-        <td>MTE 484</td>
-        <td>Fall 2024</td>
-          </tr>
-          <tr>
-            <td>Quantitative Methods in Biomedical Engineering</td>
-        <td>ECE 608</td>
-        <td>Spring 2024</td>
-          </tr>
-            <tr>
-            <td>Nano-instrumentation Lab</td>
-        <td>NE 488B</td>
-        <td>Winter 2024</td>
-          </tr>
-        </tbody>
-        </table> -->
         <h2>Bachelor Thesis</h2>
         
         <p><b>Algebraic Connectivity Analysis of Directed Double-Ring Network</b><br>
