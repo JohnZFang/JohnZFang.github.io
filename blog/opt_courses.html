@@ -51,139 +51,80 @@
         <p><small>2024-08-23</small><br>
           by Zhong Fang</p>
 
-<p>A strong idea urges me to write something on my 400th day anniversary with Canada.</p>
-<p>I departed from a city in southeastern China, transferred through the Philippines, and arrived in Vancouver at 8 pm on August 25, 2023 after a 15-hour flight.</p> 
-<p>I will talk about how I feel about life in Canada, the cultural shock I experienced and how I digest them.</p>
+<p>I've met all of my master's course requirements, congratulations!</p>
+<p>These three graduate optimization courses inspired me a lot, they have different styles but all of them are depicting different branches of optimization.</p> 
 
-        
-   <h2>Be Grateful for What I Owned</h2>
 
-        <p>How lucky the clouds disappeared with the solar eclipse path through the region of Waterloo, 
-          and the northern lights danced in the night at the peak of the solar cycle. I always fancied myself a lucky man, whenever and wherever, I am surrounded by fortune and kindness.
-        </p>
+<h2>CO 602: Introduction of Optimization</h2>
 
-<p>I don’t want to overstate the life before landing in Canada, long story short, I couldn’t shape my values without entering Wuhan University by 
-  <a href="https://en.wikipedia.org/wiki/Gaokao">gaokao</a>. I appreciate the chance to spend four years finishing my undergraduate degree there and then study in Canada.
+<p>It encompasses linear and integer programming, convex optimization and Lagrangian function. Basic definitions and theorems for optimization are built first and then the 
+  large number of proofs are prepared while diving into the simplex method. Classic convex optimization concepts are conveyed in the rest of the course. 
+This course is from the <a href="https://uwaterloo.ca/combinatorics-and-optimization/">Department of Combinatorics and Optimization</a>, which inherits the rigorously theoretical genre. 
+  Detailed convergence analysis is developed for a specific method-Projection Gradient Method, and is highly involved.
+Duality and Lagrangian are accentuated as well. Farkas' lemma, which appeared once in Linear Programming, are recalled to complete the proof for KKT conditions for more general optimization problems. 
+  At the end of the course, I have two questions:
+</p>
+<ul>
+        <li>Now I have built a foundation for optimization, but there are (mainly) three optimization methods introduced in this course. 
+          I believe there are more methods that were not covered (based on my undergraduate courses) and It would be useful to evoke them.
+          </li>
+<li>As I stated above, the convergence analysis for the Projection Gradient Method (PGM) is complex, just the thought of guaranteeing it for every method is daunting. 
+  Not to mention probably countless methods on the waiting list. Is it possible to reconcile a uniform convergence analysis?
+  </li>
+</ul>
+<p>First one is caught in SYDE 632 quickly.</p>
+
+   <h2>SYDE 632: Optimization Methods</h2>
+<p>This course is definitely focusing more on methods as opposed to theory compared to CO 602 (you can see from the course name). Classic optimization methods are unfolded in this course, 
+  verification is valued including optimality criteria for unconstrained and constrained multivariable problems. 
+</p>
+<p>It starts from the single-variable optimization methods first, the Fibonacci method and the golden section method can be applied for unimodal function, 
+  the drawback is obviously the slow convergence rate. We can't wait to think about other efficient methods despite the need to restrict our functions in a somewhat narrow range (but still applicable). 
+  The intuition is natural to the gradient of objective function based on Fermat's theorem in CO 602. 
+</p>
+<p>If the objective function is differentiable, gradient-based techniques can either transfer an optimization problem to a root-finding problem or derive optimization algorithms. 
+  There are representative root-finding methods such as secant method and bisection method (the latter is used for finding suitable parameters in my research), 
+  while gradient descent method and (Quasi) Newton's method stand for iterative optimization methods. They work well in practice, things would change if we want to add some constraints though. 
+  Recalling from CO 602, constrained optimization relies on the Lagrange Multipliers Method also referred to at the end of the course.
+</p>
+<p>Implementation of these methods is mostly concerned in this course, optimality conditions are highlighted particularly. An extra accomplishment in this course is overcoming my stage fright. 
+Classic algorithms and their derivations are suitable for retrieving as a toolbox but are not convincing to follow where the convergence guarantees are ignored. 
+  And we all know it's necessary when we expect to receive reasonable solutions when applying these algorithms to real-world problems. 
+</p>
+<p>These classic optimization methods look good, but conservativeness appears gradually as optimization problems are involved in a widely-existing large network system.</p>
+
+
+        <h2>ECE 700: Distributed Optimization</h2>
+
+
+<p>Before we move towards this course, there are some intractable problems faced in my research, which can also be seen as the drawbacks of some classic optimization methods. 
+  Implicit conservation in the aforementioned gradient-based techniques is the requirement for differentiability, which is not a practical assumption in many cases.
+It's time to reconstruct the skeleton of the convex optimization as a preparation for some novel distributed optimization algorithms. 
   </p>
-
-<p>The opportunity of studying at the University of Waterloo is a huge blessing for me. I personally believe it’s one of the BEST control communities in Canada, 
-  there are few things I want to highlight:</p>
-<ul>
-<li><b>The compact connections with industry</b>: I attended several info-sharing events, although most of them are welcomed by co-op students. 
-  I’m not a fan of following industrial trends, but it’s important to see the specific engineering problems faced by these companies.
-</li>
-<li><b>Vibrant faculty</b>: Graduate students are involved as part of the audience during the faculty hiring process. 
-  I always believe research taste will decide how long a researcher will go. Their active and fresh ideas impressed me, which will better the development of the UW 
-  control community as well. The collaboration between seniors and the new talent intrigues me to become one of them in the future.
-</li>
-<li><b>My chance to attend ACC 2024</b>: Thanks to the reputation and location of UW control community, I can be part of such an event. 
-  Talking with fellows is really enjoyable for me, it’s nice to see so many people contributing in the control field and I was glad I could help them register!
-</li>
-</ul>
-<p>People in the UW control community, DOCS group particularly, are incredibly kind and supportive, thanks a lot!!</p>
-
-
-        <h2>Never-Ending Challenges</h2>
-        
-        <p>Living in a new country sounds tempting. At least before I started doing some stupid things on my first day in Waterloo-I mistook the freezer and refrigerator 
-          (they are opposite in China). 8 frozen tomatoes are stewed as my first homemade tomato sauce.</p>
-
-<p>Language is a foreseeable challenge for a lot of international students. I’m not educated in a bilingual environment. To be honest, 
-  I probably have only used English in the last 400 days as a language, while I treated it as one of my courses or tests. I can see my progress by comparing where I am now to the beginning. 
-  Thinking like English native speakers helps me pass the translation stage quickly. My progress is almost out of my expectation and I’m confident it will continue to improve.
+<p>Basic knowledge is evoked from CO 602 and SYDE 632. For instance, the beginning of this course is Lagrangian conditions, where KKT conditions, complementary slackness, 
+  duality, and Slater conditions are encapsulated (and slightly extended) in this course. The foundation has already been constructed from CO 602 so even though it's not a keypoint in 
+  this course we have a more concrete understanding. At the same time, some novel definitions and theorems are introduced (for me at least), like subgradients, resolvents and proximals, to do so, 
+  the scope of the former courses is extended to a more comprehensive version. For example, Gradient descent method is also recalled but based on subgradients now.
 </p>
-
-<p>Stage fright originated at a young age. The most obvious symptom is that my hands will shake and then my voice and body trembles. 
-  It happened once when I had to talk to the class about solutions for assigned problems in ECE 682 in my first semester. I solved the problem, and prepared a note in case. 
-  But when I’m standing in front of the class, the disaster fell again. I was so frightened with my blank brain. I was trying to write the derivation, 
-  but all the written notes were blurry and my head was shouting “write something”, do something at least. Standing there for at least two minutes, I can gradually let my cracked voice out and proceed.
+<p>Question ii is not forgotten, all algorithms in this course are guaranteed by the convergence theorem of Fixed Point Iteration (FPI), that is, $$x^{k+1}=T(x^k),$$
+which transfers deliberate convergence analysis in PGM in CO 602 to a verification of the operator (PGM is factly a simplification of Proximal Gradient in this course). 
+  And every algorithm cascades from part of the previous one  .
 </p>
-<p>I’ve almost gone numb to it and didn’t even make any response instantly, until another presentation was scheduled in the SYDE 632 in April. My first thought is I’m screwed again, is that the case?</p>
-
-        <dl>
-<dd>John: What intimidated you?</dd>
-<dd>Zhong: I’m worried about others' feelings, I’m sensitive about their reactions, one of them frowns, I will think about if there is anything I said wrong or my mispronounced words.</dd>
-<dd>John: They might think of their own things, such as being anxious about 8 frozen tomatoes.</dd>
-      </dl>
-<p>Anyway, (at least I convinced myself that) all of my fear is actually from my own imagination. Actually, It’s not as easy as I stated above, 
-  I’ve already lived in Canada for more than 7 months at that point. My hair grows as well, my outfits are casual, no one will judge me because of my appearance. 
-  I know some people call western society a kind of  “indifferent” atmosphere. To me, it’s good for part of my personality reconstruction to be exposed to this new environment. 
+<p>Consensus is an essential technique in this course, a more general occasion, consensus with local variables is also considered in this course which….
+The Laplacian-based mixing matrix plays the role of communication in our distributed algorithms.
+</p>
+<p>It also purposely encourages me to implement distributed algorithms in real engineering problems, you can find brief info here. 
+        Their background covers robotics and sensor network, which convinces me the prospective applicability will be manifested soon in upcoming research problems involving distributed systems. 
 </p>
         
-<p>I still remember standing in front of the class, my heart beating faster, but I’m standing in my created space and getting more and more confident. 
-  I even made some eye contact and answered questions humorously.</p>
 
-<p>I really made it! It’s one of the greatest growth stories in my life.</p>
-
-<p>As a master student without talking about research difficulties seems bizarre. I won’t exaggerate that there exist too many intractable problems, 
-  sometimes I struggle with minor issues, but most of the time it’s smooth and I have an excellent supervisor helping me. I can foresee there are endless challenges 
-  waiting in the future and I’m ready for them.</p>
-
-        <h2>There Are Always Sacrifices</h2>
+        <h2>Last Words</h2>
         
-        <p>I am both the experimenter and the subject, who is eligible to talk about homesickness now. 
+        <p>Optimization is one of my favorite intersections between Math and Engineering, it's always enjoyable to learn new knowledge and see them realized in my research. 
+          I appreciate that I have met these three professors designing the above optimization courses and give us a range of freedom for exploring our real interests. 
+          I can't wait to dive into the deeper optimization field.
         </p>
-        <p>It’s recognized that international students will be indulged in the new environment and homesickness will dominate the initial excitement after several months. 
-          However, things will slightly change if the first impression is not so exciting. The first night from YVR to downtown is totally a nightmare to me. It’s not cultureshock, 
-          It’s me being shocked by the homeless sleeping on the road sides. I’ll talk about a small detail:<br>
-After going off the skytrain, I had to check the map before walking to the hotel, I was scared of being robbed, so I was standing near a police car, and I made a worst-case decision: 
-          I left my one cheaper suitcase closer to pathway, so that my loss will be slightly less if they only rob this one.
-Fortunately, I made my way to the hotel. That night, my homesickness was elevated to the peak and then gradually lessened as I adjusted to my life in Waterloo.</p>
-
-        <p>Going abroad is emotionally complex for my parents. On the one hand, they respect my decision as I’m growing up. On the other hand, they have their own fear about the unknown, 
-          me too, but I can’t leak my fragility to them. Several years of separation of two countries is hard for them, but there is no existing scenario that compromises between my 
-          individual will and their emotional attachment. </p>
-        <p>Think about wildlife in nature, the male will be exiled after growing up. I still believe there are some original genetic factors that force me to leave and learn things 
-          from a bigger world. In fact, we all grow up from experiencing the new life track. I always feel Chinese parents commit too much to their children and sometimes they are 
-          sacrificing themselves to fulfill their children. It’s so glad to hear that they gradually transfer their life center to themselves, while I keep exploring my foreign journey.</p>
-
-        <p>Ten days ago was the Mid-Autumn Festival, which is regarded as an important Chinese festival for family reunions. My parents asked about my recent status, 
-          and it’s hard for all of us to let intimate feelings out, I just looked at the moon with silence and I believe they knew it.
-        </p>
-
-        <h2>Be Healthy, Physically and Mentally</h2>
-<p>I want to remind myself about my anxiety in my last application season, which was just two years ago. I'm still nervous sometimes, but I’m more mentally supported by my determined core. 
-  They are from my body energy and mental self-consistency.</p>
-
-<p>Everyday when it reaches 4pm, “Okay, It’s gym time now!” I can understand the magic of “It takes 21 days to develop a habit.” and suffer from the dilemma that I don’t want 
-  my consecutive gym-day record to be broken. I enjoy the dopamine release during workout, and it is attractive to chase the better me.
-</p>
-<p>My mental health is maintained by two new skills. One is focusing on myself, the other one is enjoying the loneliness. (You can also claim the latter is the result of the former.) 
-  The following is just my observation and my experience. 
-</p>
-<p>Dealing with peer pressure should be a compulsory course for every student from Chinese education but neglected. There is a main characteristic: we are always afraid of being a 
-  laggard and shamed for recreation. “‘A’sian not ‘B’sian” sounds like a joke, but it does happen to a lot of Chinese children from an early childhood education. 
-  I personally think it’s related to some traditional Chinese ideas:
-</p>
-<ul>
-        <li><b>The concept of “family”</b>: “Family” here can be extended to a larger range-from friends in real life to virtual influencers. Social media is trying to create an 
-          illusion about a sense of conversation, and we will misclassify them as parts of our “Family”.</li>
-<li><b>Always compare</b>: Our accomplishment is rooted in the comparison with others, “neighbor's kids” is a microcosm of the self-satisfaction mechanism. 
-  It’s a strong weapon to help you compete for some time, but be careful of potential jealousy.</li>
-<li><b>Criticize is way more than compliment</b>: It’s believed that compliments will make children cocky, and then it will be out of control. To suppress it, tough love is revered.</li>
-</ul>
-<p>And the circumstance is: once we have a large “Family” for us to compare then we will never be satisfied, even if you are lucky enough, make yourself exceptional, 
-  you will be striked due to your arrogance. It’s a death loop.
-</p>
-<p>I’m extricating myself from the illusive relationship and focusing on my own growth purposely. I made some friends in Canada, and I still enjoy the social time. 
-  However, most of the time I’m accompanied by loneliness, which keeps me sober and mindful.
-</p>
-
-<h2>Last Words</h2>
-        <p>Don’t get me wrong, I’m not critical of Chinese educational ideas, as I said “there are always sacrifices”, thinking deeply and deciding which parts are absorbed is really important.</p>
-
-<p>A persistent foggy weather smothered Waterloo during last Christmas, it’s reminiscent of a game where the player can only see the limited space around itself and try to find the exit. 
-  The tragedy is although it’s an unusual “severe weather” in the forecast, life is opposite. Uncertainty is the damp mist around me, I don’t know where the destination is and I have no chance to regret.
-</p>
-<p>“Get out of your comfort zone” is kind of abused these days, I prefer “Be in a different water”. I heard it from a <a href="https://cansbridgefellowship.com/">cansbridge fellowship</a> info 
-  sharing session, which is open to all UW students by providing a fellowship to support them working in Asia. Sitting in the largest Canadian engineering building, 
-  watching a Japanese person talking about how to find <a href="https://en.wikipedia.org/wiki/Ikigai">ikigai</a>, is incredibly interesting. It is always illuminating to see the embrace between eastern and western culture, 
-  and always keeps me swimming with an open mind in different oceans.
-</p>
-<p>By the way, I haven’t celebrated my birthday for a long time, it’s occasionally forgotten, but still, happy 23rd birthday! 
-</p>
-<p>It must be meaningful when I look back at this diary.
-</p>
+     
 
         <p><a href="https://JohnZFang.github.io/blog/blog_posts.html">Back to blog</a></p>
         
